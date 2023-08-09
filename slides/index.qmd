@@ -8,6 +8,15 @@ bibliography: references.bib
 
 # Welcome!
 
+## What to expect during this workshop
+
+~ 3 hours
+
+* intro to ml
+* intro to tidymodels 
+
+* 6 exercises
+
 ## Housekeeping
 
 * GitHub:
@@ -15,9 +24,20 @@ bibliography: references.bib
 
 ## Data
 
-Dorothea
+```{r}
+#| label: read-data
+#| echo: false
+#| eval: true
+#| message: false
+library(tidyverse)
+library(tidymodels)
+tidymodels_prefer()
+heart_failure <- read_csv("data/heart_failure.csv") 
+```
+* Examples data: Heart Failure Clinical Records
+[archive.ics.uci.edu/dataset/519/heart+failure+clinical+records](http://archive.ics.uci.edu/dataset/519/heart+failure+clinical+records)
 
-[archive.ics.uci.edu/dataset/169/dorothea](http://archive.ics.uci.edu/dataset/169/dorothea)
+* Exercises data: 
 
 ## What is machine learning?
 
@@ -46,15 +66,44 @@ Dorothea
 
 * unsupervised / supervised
 
-* training testing
+# Training and testing
 
-* hyperparameters
+```{r}
+#| label: split-data
+#| echo: false
+#| eval: true
+#| message: false
+set.seed(20231018)
+hf_split <- initial_split(heart_failure)
+hf_train <- training(hf_split)
+hf_test <- testing(hf_split)
+```
+
+## Exercise 1
 
 # Supervised learning
 
-## Logistic regression recap
+## Logistic regression
+
+## Logistic regression in R
+
+```{r}
+#| label: glm
+#| echo: true
+#| eval: true
+#| message: false
+mod1 <- glm(death~., family = "binomial", data = hf_train)
+summary(mod1)
+```
 
 ## Lasso logisitic regression
+
+## Hyperparameter tuning
+
+## Model evaluation
+
+
+## Exercise 2
 
 ## Random forests
 
