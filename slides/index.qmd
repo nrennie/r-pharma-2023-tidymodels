@@ -1,0 +1,75 @@
+---
+title: "Machine learning with {tidymodels}"
+subtitle: "R/Pharma 2023"
+author: "Dr Nicola Rennie"
+format: revealjs
+bibliography: references.bib
+---
+
+# Welcome!
+
+## Housekeeping
+
+* GitHub:
+* Slides: 
+
+## Data
+
+Dorothea
+
+[archive.ics.uci.edu/dataset/169/dorothea](http://archive.ics.uci.edu/dataset/169/dorothea)
+
+## What is machine learning?
+
+## What is {tidymodels}?
+
+::: columns
+::: {.column}
+
+* A collection of R packages for statistical modelling and machine learning.
+
+* Follows the {tidyverse} principles.
+
+* `install.packages("tidymodels")`
+
+:::
+
+::: {.column}
+
+![](images/tidymodels.png){fig-align="center" fig-alt="tidymodels R package hex sticker logo" width=50%}
+
+:::
+:::
+
+
+# Concepts in ML
+
+* unsupervised / supervised
+
+* training testing
+
+* hyperparameters
+
+# Supervised learning
+
+## Logistic regression recap
+
+## Lasso logisitic regression
+
+## Random forests
+
+# Unsupervised learning
+
+## k means
+
+## hierarchical?
+
+## other things we didn't do
+
+## additional resources
+
+
+
+
+
+
