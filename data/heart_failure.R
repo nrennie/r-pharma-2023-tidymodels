@@ -23,7 +23,7 @@ heart_failure <- heart_failure_clinical_records |>
          serum_creatinine, serum_creatinine, creatinine_phosphokinase,
          platelets, ejection_fraction, time, DEATH_EVENT) |> 
   rename(death = DEATH_EVENT) |> 
-  mutate(across(anaemia:high_blood_pressure, as.character),
+  mutate(across(smoking:high_blood_pressure, as.character),
          sex = case_when(sex == 0 ~ "F",
                          sex == 1 ~ "M"))
 
