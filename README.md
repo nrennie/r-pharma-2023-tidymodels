@@ -6,7 +6,8 @@
 
 Make sure the most recent versions of the following packages available:
 
-* readr
+* tidyverse
 * tidymodels
 * glmnet
-* radnmForest???
+
+
