@@ -28,5 +28,5 @@ hf_test <- testing(hf_split)
 # Logistic regression -----------------------------------------------------
 
 # fit using glm
-mod1 <- glm(death~., family = "binomial", data = heart_failure)
+mod1 <- glm(death~., family = "binomial", data = hf_train)
 summary(mod1)
