@@ -81,6 +81,15 @@ hf_test <- testing(hf_split)
 
 ## Exercise 1
 
+add count down timer
+
+* Load relevant packages
+
+* Read in the ... data from GitHub
+
+* Perform the initial split
+
+
 # Supervised learning
 
 ## Logistic regression
@@ -97,6 +106,8 @@ summary(mod1)
 ```
 
 ## Lasso logisitic regression
+
+## workflows in tm
 
 ## Hyperparameter tuning
 
