@@ -1,0 +1,65 @@
+% load packages
+\usepackage{geometry}
+\usepackage{xcolor}
+\usepackage{eso-pic}
+\usepackage{fancyhdr}
+\usepackage{sectsty}
+\usepackage{fontspec}
+\usepackage{titlesec}
+
+%% Set page size with a wider right margin
+\geometry{a4paper, total={170mm,257mm}, left=20mm, top=20mm, bottom=20mm, right=20mm}
+
+%% Let's define some colours
+\definecolor{white}{HTML}{ffffff}
+\definecolor{lightgrey}{HTML}{fafafa}
+\definecolor{LUred}{HTML}{b20e10}
+\definecolor{LUlight}{HTML}{bec0c2}
+\definecolor{LUdark}{HTML}{555656}
+
+%% Style the page number
+\fancypagestyle{mystyle}{
+  \fancyhf{}
+  \renewcommand\headrulewidth{0pt}
+  \fancyfootoffset{3.5cm}
+}
+\setlength{\footskip}{20pt}
+
+%% style the chapter/section fonts
+\chapterfont{\color{LUdark}\fontsize{24pt}{16.8pt}\selectfont}
+\sectionfont{\color{LUdark}\fontsize{22pt}{16.8pt}\selectfont}
+\subsectionfont{\color{LUdark}\fontsize{14pt}{16.8pt}\selectfont}
+\titleformat{\subsection}
+  {\sffamily\Large\bfseries}{\thesubsection}{1em}{}[{\titlerule[0.8pt]}]
+\newcommand{\sectionbreak}{\clearpage}
+
+% left align title
+\makeatletter
+\renewcommand{\maketitle}{\bgroup\setlength{\parindent}{0pt}
+  {\sffamily\LARGE\textbf{\vspace{3cm}\newline \@title}} \vspace{3cm} \newline
+  \includegraphics[width=15cm]{_extensions/nrennie/LUstyle/LUlogo-pdf.png} \vspace{3cm}  \newline
+  {\sffamily\LARGE{\@subtitle}} \vspace{1cm} \newline
+  {\Large {\@author}} \vspace{1cm} \newline
+  {\large {\@date}}
+  \thispagestyle{empty} 
+\egroup
+}
+\makeatother
+
+%% Use some custom fonts
+\setsansfont{RobotoSlab}[
+    Path=_extensions/nrennie/LUstyle/fonts/RobotoSlab/,
+    Scale=0.9,
+    Extension = .ttf,
+    UprightFont=*-Regular,
+    BoldFont=*-Bold,
+    ]
+
+\setmainfont{Roboto}[
+    Path=_extensions/nrennie/LUstyle/fonts/Roboto/,
+    Scale=0.9,
+    Extension = .ttf,
+    UprightFont=*-Regular,
+    BoldFont=*-Bold,
+    ItalicFont=*-Italic,
+    ]
