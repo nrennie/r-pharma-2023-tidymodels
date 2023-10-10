@@ -1,8 +1,10 @@
 ---
-title: "Machine learning with {tidymodels}"
+title: "Introduction to machine learning with {tidymodels}"
 subtitle: "R/Pharma 2023"
 author: "Dr Nicola Rennie"
-format: revealjs
+format:
+  LUstyle-revealjs:
+    footer: "[nrennie.github.io/r-pharma-2023-tidymodels](https://nrennie.github.io/r-pharma-2023-tidymodels)"
 bibliography: references.bib
 ---
 
@@ -10,36 +12,65 @@ bibliography: references.bib
 
 ## What to expect during this workshop
 
-~ 3 hours
+The workshop will run for *2 hours*.
 
-* intro to ml
-* intro to tidymodels 
+* We'll take a 10 minute break halfway through.
 
-* 6 exercises
+* Combines slides, live coding examples, and 4 exercises for you to participate in.
 
-## Housekeeping
+* Ask questions in the chat throughout!
 
-* GitHub:
-* Slides: 
+## Workshop resources
+
+* GitHub: [github.com/nrennie/r-pharma-2023-tidymodels](https://github.com/nrennie/r-pharma-2023-tidymodels)
+
+* Slides: [nrennie.github.io/r-pharma-2023-tidymodels](https://nrennie.github.io/r-pharma-2023-tidymodels)
+
+* Posit Cloud: []()
 
 ## Data
 
-```{r}
-#| label: read-data
-#| echo: false
-#| eval: true
-#| message: false
-library(tidyverse)
-library(tidymodels)
-tidymodels_prefer()
-heart_failure <- read_csv("data/heart_failure.csv") 
-```
+We'll use two data sets in this workshop:
+
 * Examples data: Heart Failure Clinical Records
 [archive.ics.uci.edu/dataset/519/heart+failure+clinical+records](http://archive.ics.uci.edu/dataset/519/heart+failure+clinical+records)
 
+```{r}
+#| label: read-data-example
+#| echo: false
+#| eval: false
+#| message: false
+heart_failure <- readr::read_csv("data/heart_failure.csv") 
+```
+
 * Exercises data: 
 
+```{r}
+#| label: read-data-exercises
+#| echo: false
+#| eval: false
+#| message: false
+heart_failure <- readr::read_csv("data/heart_failure.csv") 
+```
+
 ## What is machine learning?
+
+## Types of machine learning
+
+Aim:
+
+* Classification
+* Prediction
+
+
+Process:
+
+* Supervised
+* Unsupervised
+
+. . . 
+
+* Semi-supervised
 
 ## What is {tidymodels}?
 
@@ -61,17 +92,30 @@ heart_failure <- read_csv("data/heart_failure.csv")
 :::
 :::
 
+## Loading {tidymodels}
 
-# Concepts in ML
+```{r}
+#| label: read-data
+#| echo: false
+#| eval: false
+#| message: false
+library(tidyverse)
+library(tidymodels)
+tidymodels_prefer()
+```
 
-* unsupervised / supervised
 
 # Training and testing
+
+## Training and testing
+
+
+## Training and testing in {tidymodels}
 
 ```{r}
 #| label: split-data
 #| echo: false
-#| eval: true
+#| eval: false
 #| message: false
 set.seed(20231018)
 hf_split <- initial_split(heart_failure)
@@ -92,20 +136,28 @@ add count down timer
 
 # Supervised learning
 
-## Logistic regression
+## Lasso regression
+
+Let's go back a little bit... 
+
+## Linear regression
+
+linear model are ...
+
+in R
 
 ## Logistic regression in R
 
 ```{r}
 #| label: glm
 #| echo: true
-#| eval: true
+#| eval: false
 #| message: false
 mod1 <- glm(death~., family = "binomial", data = hf_train)
 summary(mod1)
 ```
 
-## Lasso logisitic regression
+## Lasso logistic regression
 
 ## workflows in tm
 
@@ -116,7 +168,12 @@ summary(mod1)
 
 ## Exercise 2
 
+Fit a Lasso logistic regression model to 
+
 ## Random forests
+
+
+## SVM
 
 # Unsupervised learning
 
@@ -126,10 +183,17 @@ summary(mod1)
 
 ## other things we didn't do
 
-## additional resources
+## Additional resources
 
+* GitHub: [github.com/nrennie/r-pharma-2023-tidymodels](https://github.com/nrennie/r-pharma-2023-tidymodels)
 
+* Slides: [nrennie.github.io/r-pharma-2023-tidymodels](https://nrennie.github.io/r-pharma-2023-tidymodels)
 
+---
+
+* [Tidy Modeling with R](https://www.tmwr.org/)
+
+* [Blog by Julia Silge](https://juliasilge.com/blog/)
 
 
 
