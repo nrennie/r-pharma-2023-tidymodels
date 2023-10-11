@@ -1,0 +1,24 @@
+title: Lancaster University Quarto Template
+author: Nicola Rennie
+version: 0.0.2
+contributes:
+  formats: 
+    revealjs:
+      logo: LUlogo.png
+      theme: LUstyle.scss
+      height: 900
+      width: 1600
+      title-slide-attributes:
+        data-background-color: "#D9DBDB"
+    html:
+      theme: [default, LUstyle.scss]
+    pdf:
+      include-in-header: 
+       - "LUpdf.tex"
+       - "columns.tex"
+      toc: true
+      toc-depth: 2
+      fontsize: 12pt
+      code-block-bg: lightgrey
+      linkcolor: LUred
+      urlcolor: LUred
