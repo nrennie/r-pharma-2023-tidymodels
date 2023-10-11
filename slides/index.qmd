@@ -16,7 +16,7 @@ The workshop will run for *2 hours*.
 
 * We'll take a 5 minute break halfway through.
 
-* Combines slides, live coding examples, and exercises for you to participate in.
+* Combines slides, live coding examples, quiz questions, and exercises for you to participate in.
 
 * Ask questions in the chat throughout!
 
@@ -30,9 +30,7 @@ The workshop will run for *2 hours*.
 
 We'll use two data sets in this workshop:
 
-* Examples data: Heart Failure Clinical Records
-
-[archive.ics.uci.edu/dataset/519/heart+failure+clinical+records](http://archive.ics.uci.edu/dataset/519/heart+failure+clinical+records)
+* Examples data: Heart Failure Clinical Records. [archive.ics.uci.edu/dataset/519/heart+failure+clinical+records](http://archive.ics.uci.edu/dataset/519/heart+failure+clinical+records)
 
 ```{r}
 #| label: read-data-example
@@ -41,9 +39,9 @@ We'll use two data sets in this workshop:
 heart_failure <- readr::read_csv("data/heart_failure.csv") 
 ```
 
-* Exercises data: Physical Exercise in Patients with Subacute Stroke (PHYS-STROKE): safety analyses of six-month follow-up of a randomized clinical trial
+<br>
 
-[doi.org/10.5281/zenodo.3899830](https://doi.org/10.5281/zenodo.3899830)
+* Exercises data: Physical Exercise in Patients with Subacute Stroke (PHYS-STROKE): safety analyses of six-month follow-up of a randomized clinical trial. [doi.org/10.5281/zenodo.3899830](https://doi.org/10.5281/zenodo.3899830)
 
 ```{r}
 #| label: read-data-exercises
@@ -52,7 +50,7 @@ heart_failure <- readr::read_csv("data/heart_failure.csv")
 exercises <- readr::read_csv("data/exercises.csv") 
 ```
 
-# Getting started with {tidymodels} {background-color="#D9DBDB"}
+# Getting started with \{tidymodels\} {background-color="#D9DBDB"}
 
 ## What is {tidymodels}?
 
@@ -76,6 +74,18 @@ exercises <- readr::read_csv("data/exercises.csv")
 
 ## What is machine learning?
 
+## Quiz!
+
+Have you done machine learning in R before?
+
+* No
+
+* Yes, with {tidymodels}
+
+* Yes, with {caret}
+
+* Yes, with something else
+
 ## Types of machine learning
 
 Aim:
@@ -93,7 +103,6 @@ Process:
 
 * Semi-supervised
 
-# Training and testing
 
 ## Training and testing
 
@@ -114,7 +123,9 @@ Open `exercises/exercise_01.R` for prompts.
 
 * Read in the `exercises.csv` data
 
-* Perform the initial split (choose your own proportion)
+* View and explore the data
+
+* Perform the initial split (choose your own proportion!)
 
 ```{r}
 #| label: ex-1-timer
@@ -134,11 +145,11 @@ countdown::countdown(minutes = 5,
 
 See `exercise_solutions/exercise_solutions_01.R` for full code.
 
-# Lasso regression
-
-Let's go back a little bit... 
+# Lasso regression {background-color="#D9DBDB"}
 
 ## Linear and logistic regression models
+
+Let's go back a little bit first... 
 
 ::: columns
 
@@ -148,7 +159,7 @@ Let's go back a little bit...
 #| label: lin-reg
 #| eval: false
 #| echo: true
-lm()
+mod1 <- lm()
 ```
 :::
 
@@ -159,11 +170,15 @@ lm()
 #| label: log-reg
 #| eval: false
 #| echo: true
-glm()
+mod2 <- glm()
 ```
 :::
 
 :::
+
+## Quiz!
+
+How do you choose which explanatory variables to include?
 
 # Lasso regression
 
@@ -201,6 +216,8 @@ countdown::countdown(minutes = 10,
 See `exercise_solutions/exercise_solutions_02.R` for full code.
 
 # Random Forests {background-color="#D9DBDB"}
+
+## Decision trees
 
 ## What are Random Forests?
 
@@ -283,7 +300,7 @@ See `exercise_solutions/exercise_solutions_04.R` for full code.
 
 * Slides: [nrennie.github.io/r-pharma-2023-tidymodels](https://nrennie.github.io/r-pharma-2023-tidymodels)
 
----
+. . . 
 
 * [Tidy Modeling with R](https://www.tmwr.org/)
 
@@ -296,7 +313,7 @@ See `exercise_solutions/exercise_solutions_04.R` for full code.
 
 <br>
 
-{{< fa brands twitter >}} [@nrennie35](https://twitter.com/nrennie35)
+{{< fa brands twitter >}} [\@nrennie35](https://twitter.com/nrennie35)
 
 {{< fa brands github >}} [nrennie](https://github.com/nrennie)
 
@@ -307,8 +324,7 @@ See `exercise_solutions/exercise_solutions_04.R` for full code.
 :::
 ::: {.column}
 
-add QR code
-![](){fig-align="center" fig-alt="QR code" width=70%}
+![](images/qr-code.png){fig-align="center" fig-alt="QR code" width=70%}
 
 :::
 :::
