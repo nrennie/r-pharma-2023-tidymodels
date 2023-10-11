@@ -14,9 +14,9 @@ bibliography: references.bib
 
 The workshop will run for *2 hours*.
 
-* We'll take a 10 minute break halfway through.
+* We'll take a 5 minute break halfway through.
 
-* Combines slides, live coding examples, and 4 exercises for you to participate in.
+* Combines slides, live coding examples, and exercises for you to participate in.
 
 * Ask questions in the chat throughout!
 
@@ -26,51 +26,33 @@ The workshop will run for *2 hours*.
 
 * Slides: [nrennie.github.io/r-pharma-2023-tidymodels](https://nrennie.github.io/r-pharma-2023-tidymodels)
 
-* Posit Cloud: []()
-
 ## Data
 
 We'll use two data sets in this workshop:
 
 * Examples data: Heart Failure Clinical Records
+
 [archive.ics.uci.edu/dataset/519/heart+failure+clinical+records](http://archive.ics.uci.edu/dataset/519/heart+failure+clinical+records)
 
 ```{r}
 #| label: read-data-example
-#| echo: false
+#| echo: true
 #| eval: false
-#| message: false
 heart_failure <- readr::read_csv("data/heart_failure.csv") 
 ```
 
-* Exercises data: 
+* Exercises data: Physical Exercise in Patients with Subacute Stroke (PHYS-STROKE): safety analyses of six-month follow-up of a randomized clinical trial
+
+[doi.org/10.5281/zenodo.3899830](https://doi.org/10.5281/zenodo.3899830)
 
 ```{r}
 #| label: read-data-exercises
-#| echo: false
+#| echo: true
 #| eval: false
-#| message: false
-heart_failure <- readr::read_csv("data/heart_failure.csv") 
+exercises <- readr::read_csv("data/exercises.csv") 
 ```
 
-## What is machine learning?
-
-## Types of machine learning
-
-Aim:
-
-* Classification
-* Prediction
-
-
-Process:
-
-* Supervised
-* Unsupervised
-
-. . . 
-
-* Semi-supervised
+# Getting started with {tidymodels} {background-color="#D9DBDB"}
 
 ## What is {tidymodels}?
 
@@ -92,18 +74,24 @@ Process:
 :::
 :::
 
-## Loading {tidymodels}
+## What is machine learning?
 
-```{r}
-#| label: read-data
-#| echo: false
-#| eval: false
-#| message: false
-library(tidyverse)
-library(tidymodels)
-tidymodels_prefer()
-```
+## Types of machine learning
 
+Aim:
+
+* Classification
+* Prediction
+
+
+Process:
+
+* Supervised
+* Unsupervised
+
+. . . 
+
+* Semi-supervised
 
 # Training and testing
 
@@ -112,76 +100,182 @@ tidymodels_prefer()
 
 ## Training and testing in {tidymodels}
 
-```{r}
-#| label: split-data
-#| echo: false
-#| eval: false
-#| message: false
-set.seed(20231018)
-hf_split <- initial_split(heart_failure)
-hf_train <- training(hf_split)
-hf_test <- testing(hf_split)
-```
+Live demo!
+
+. . . 
+
+See `examples/example_01.R` for full code.
 
 ## Exercise 1
 
-add count down timer
+Open `exercises/exercise_01.R` for prompts.
 
-* Load relevant packages
+* Load the {tidyverse} and {tidymodels} packages
 
-* Read in the ... data from GitHub
+* Read in the `exercises.csv` data
 
-* Perform the initial split
+* Perform the initial split (choose your own proportion)
 
+```{r}
+#| label: ex-1-timer
+countdown::countdown(minutes = 5,
+                    color_border = "#b20e10",
+                    color_text = "#b20e10",
+                    color_running_text = "white",
+                    color_running_background = "#b20e10",
+                    color_finished_text = "#b20e10",
+                    color_finished_background = "white",
+                    top = 0,
+                    margin = "1.2em",
+                    font_size = "2em")
+```
 
-# Supervised learning
+. . . 
 
-## Lasso regression
+See `exercise_solutions/exercise_solutions_01.R` for full code.
+
+# Lasso regression
 
 Let's go back a little bit... 
 
-## Linear regression
+## Linear and logistic regression models
 
-linear model are ...
+::: columns
 
-in R
+::: {.column}
+**Linear regression**
+```{r}
+#| label: lin-reg
+#| eval: false
+#| echo: true
+lm()
+```
+:::
 
-## Logistic regression in R
+::: {.column}
+**Logistic regression**
 
 ```{r}
-#| label: glm
-#| echo: true
+#| label: log-reg
 #| eval: false
-#| message: false
-mod1 <- glm(death~., family = "binomial", data = hf_train)
-summary(mod1)
+#| echo: true
+glm()
 ```
+:::
 
-## Lasso logistic regression
+:::
 
-## workflows in tm
+# Lasso regression
 
-## Hyperparameter tuning
 
-## Model evaluation
+## Lasso logistic regression in {tidymodels}
+
+Live demo!
+
+. . . 
+
+See `examples/example_02.R` for full code.
 
 
 ## Exercise 2
 
-Fit a Lasso logistic regression model to 
-
-## Random forests
+Open `exercises/exercise_02.R` for prompts.
 
 
-## SVM
+```{r}
+#| label: ex-2-timer
+countdown::countdown(minutes = 10,
+                    color_border = "#b20e10",
+                    color_text = "#b20e10",
+                    color_running_text = "white",
+                    color_running_background = "#b20e10",
+                    color_finished_text = "#b20e10",
+                    color_finished_background = "white",
+                    top = 0,
+                    margin = "1.2em",
+                    font_size = "2em")
+```
 
-# Unsupervised learning
+. . . 
 
-## k means
+See `exercise_solutions/exercise_solutions_02.R` for full code.
 
-## hierarchical?
+# Random Forests {background-color="#D9DBDB"}
 
-## other things we didn't do
+## What are Random Forests?
+
+## Random Forests in {tidymodels}
+
+Live demo!
+
+. . . 
+
+See `examples/example_03.R` for full code.
+
+## Exercise 3
+
+Open `exercises/exercise_03.R` for prompts.
+
+
+```{r}
+#| label: ex-3-timer
+countdown::countdown(minutes = 10,
+                    color_border = "#b20e10",
+                    color_text = "#b20e10",
+                    color_running_text = "white",
+                    color_running_background = "#b20e10",
+                    color_finished_text = "#b20e10",
+                    color_finished_background = "white",
+                    top = 0,
+                    margin = "1.2em",
+                    font_size = "2em")
+```
+
+. . . 
+
+See `exercise_solutions/exercise_solutions_03.R` for full code.
+
+# Support Vector Machines (SVM) {background-color="#D9DBDB"}
+
+## What are Support Vector Machines?
+
+
+## Support Vector Machines in {tidymodels}
+
+Live demo!
+
+. . . 
+
+See `examples/example_04.R` for full code.
+
+## Exercise 4
+
+Open `exercises/exercise_04.R` for prompts.
+
+
+```{r}
+#| label: ex-4-timer
+countdown::countdown(minutes = 10,
+                    color_border = "#b20e10",
+                    color_text = "#b20e10",
+                    color_running_text = "white",
+                    color_running_background = "#b20e10",
+                    color_finished_text = "#b20e10",
+                    color_finished_background = "white",
+                    top = 0,
+                    margin = "1.2em",
+                    font_size = "2em")
+```
+
+. . . 
+
+See `exercise_solutions/exercise_solutions_04.R` for full code.
+
+# Additional Information {background-color="#D9DBDB"}
+
+## Unsupervised learning
+
+* K-means clustering
 
 ## Additional resources
 
@@ -195,5 +289,27 @@ Fit a Lasso logistic regression model to
 
 * [Blog by Julia Silge](https://juliasilge.com/blog/)
 
+## 
 
+::: columns
+::: {.column}
+
+<br>
+
+{{< fa brands twitter >}} [@nrennie35](https://twitter.com/nrennie35)
+
+{{< fa brands github >}} [nrennie](https://github.com/nrennie)
+
+{{< fa globe >}} [nrennie.rbind.io](https://nrennie.rbind.io/)
+
+{{< fa briefcase >}} [chicas.lancaster-university.uk](https://chicas.lancaster-university.uk/)
+
+:::
+::: {.column}
+
+add QR code
+![](){fig-align="center" fig-alt="QR code" width=70%}
+
+:::
+:::
 
