@@ -14,3 +14,6 @@
 # Split into training and testing -----------------------------------------
 
 
+
+# choose a different split proportion?
+
