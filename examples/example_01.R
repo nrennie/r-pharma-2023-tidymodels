@@ -9,8 +9,12 @@ tidymodels_prefer()
 # Load data ---------------------------------------------------------------
 
 heart_failure <- read_csv("data/heart_failure.csv")
-View(heart_failure)
+heart_failure
 
+heart_failure <- heart_failure |> 
+  mutate(death = factor(death))
+
+View(heart_failure)
 
 # Inspect variables -------------------------------------------------------
 
