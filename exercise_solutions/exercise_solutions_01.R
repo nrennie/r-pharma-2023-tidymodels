@@ -10,7 +10,7 @@ tidymodels_prefer()
 
 exercise <- read_csv("data/exercise.csv")
 exercise <- exercise |> 
-  mutate(death = factor(SAE))
+  mutate(SAE = factor(SAE))
 
 
 # Inspect variables -------------------------------------------------------

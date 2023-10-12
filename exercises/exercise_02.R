@@ -1,23 +1,21 @@
 
-# Build a recipe ----------------------------------------------------------
-
-
 # Specify the model -------------------------------------------------------
+# use the `logistic_reg` and `set_engine` functions
 
 
 # Tune the model ----------------------------------------------------------
 
-# Create cross validation folds
+# Fit lots of values using `tune_grid()`
 
-# Fit lots of values
-
-# Choose the best value
+# Choose the best value using `select_best()`
 
 
 # Fit the final model -----------------------------------------------------
+# use the `finalize_workflow` function and `add_model`
 
 
 # Model evaluation --------------------------------------------------------
+# use `last_fit()` and `collect_metrics()`
 
 
 # which variables were most important?

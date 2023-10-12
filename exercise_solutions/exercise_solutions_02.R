@@ -1,40 +1,26 @@
 
-# Build a recipe ----------------------------------------------------------
-
-ex_recipe <- recipe(SAE ~ ., data = ex_train) |> 
-  step_dummy(Treatment:VE_Cardio) |> 
-  step_normalize(all_numeric())
-
-wf <- workflow() |> 
-  add_recipe(ex_recipe)
-
-
 # Specify the model -------------------------------------------------------
-
+# use the `logistic_reg` and `set_engine` functions
 tune_spec <- logistic_reg(penalty = tune(), mixture = 1) |>
   set_engine("glmnet")
 
 
 # Tune the model ----------------------------------------------------------
 
-# Create cross validation folds
-set.seed(20231018)
-ex_folds <- vfold_cv(ex_train, v = 10)
-
-# Fit lots of values
+# Fit lots of values using `tune_grid()`
 lasso_grid <- tune_grid(
-  add_model(wf, tune_spec),
+  add_model(ex_wf, tune_spec),
   resamples = ex_folds,
   grid = grid_regular(penalty(), levels = 50)
 )
 
-# Choose the best value
+# Choose the best value using `select_best()`
 highest_roc_auc <- lasso_grid |>
   select_best("roc_auc")
 
 
 # Fit the final model -----------------------------------------------------
-
+# use the `finalize_workflow` function and `add_model`
 final_lasso <- finalize_workflow(
   add_model(wf, tune_spec),
   highest_roc_auc
@@ -42,7 +28,7 @@ final_lasso <- finalize_workflow(
 
 
 # Model evaluation --------------------------------------------------------
-
+# use `last_fit()` and `collect_metrics()`
 last_fit(final_lasso, ex_split) |>
   collect_metrics()
 
