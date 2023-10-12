@@ -9,14 +9,16 @@ tidymodels_prefer()
 # Load the `exercise.csv` data --------------------------------------------
 
 exercise <- read_csv("data/exercise.csv")
+exercise <- exercise |> 
+  mutate(death = factor(SAE))
 
 
 # Inspect variables -------------------------------------------------------
 
 View(exercise)
-barplot(table(exercise$SAE.death))
-barplot(table(exercise$Geschlecht))
-hist(exercise$Bas_BMI)
+barplot(table(exercise$SAE))
+barplot(table(exercise$Gender))
+hist(exercise$BMI)
 
 
 # Split into training and testing -----------------------------------------
