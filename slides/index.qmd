@@ -242,8 +242,13 @@ See `examples/example_03.R` for full code.
 
 ## Exercise 3
 
-Open `exercises/exercise_03.R` for prompts.
+Open `exercises/exercise_03.R` for prompts. You can also use `examples/example_03.R` as a starting point.
 
+* Specify a random forest model using `rand_forest()`
+
+* Tune the hyperparameters using the cross-validation folds from exercise 2.
+
+* Fit the final model and evaluate it.
 
 ```{r}
 #| label: ex-3-timer
