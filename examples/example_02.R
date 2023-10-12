@@ -3,7 +3,7 @@
 
 hf_recipe <- recipe(death ~ ., data = hf_train) |> 
   step_dummy(sex) |> 
-  step_normalize(all_numeric())
+  step_normalize(age, serum_creatinine:time)
 
 wf <- workflow() |> 
   add_recipe(hf_recipe)
