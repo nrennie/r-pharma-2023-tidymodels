@@ -14,11 +14,19 @@ exercise <- safety.set |>
          Gender = Geschlecht,
          SAE = subgroup,
          Centre = Zentrum) |> 
-  select(-c(SAE.hosp.time.Pat, patient.months.V3,
+  mutate(Centre = factor(paste0("Centre", Centre))) |> 
+  select(-c(SAE.total, SAE.hosp.time.Pat, SAE.stroke, SAE.readmission,
+            patient.months.V3, Bas_VE_Comorb, Centre,
             SAE.death, Bas_SA_Lok_Seite, Bas_SA_Lok_hinter, obs.time)) |> 
   rename_with(~ gsub("Bas_", "", .x, fixed = TRUE)) |> 
   select(c(where(is.numeric), where(is.factor))) |> 
-  relocate(SAE)
+  relocate(SAE) |> 
+  mutate(
+    SAE = factor(case_when(
+      SAE == "SAE" ~ 1,
+      SAE == "No SAE" ~ 0,
+    ))
+  )
 
 
 # Write to CSV ------------------------------------------------------------
