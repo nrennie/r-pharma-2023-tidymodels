@@ -198,8 +198,15 @@ See `examples/example_02.R` for full code.
 
 ## Exercise 2
 
-Open `exercises/exercise_02.R` for prompts.
+Open `exercises/exercise_02.R` for prompts. You can also use `examples/example_02.R` as a starting point.
 
+* Build a recipe and specify the model.
+
+* Create cross-validation folds and tune the hyperparameter.
+
+* Choose the best value and fit the final model.
+
+* Evaluate the model performance.
 
 ```{r}
 #| label: ex-2-timer
