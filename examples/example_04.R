@@ -1,4 +1,3 @@
-set.seed(20231018)
 
 # Specify model -----------------------------------------------------------
 
@@ -29,7 +28,8 @@ final_svm <- finalize_workflow(
 
 # Evaluate ----------------------------------------------------------------
 
-last_fit(final_svm, hf_split) |>
+last_fit(final_svm, hf_split,
+         metrics = metric_set(roc_auc, accuracy, f_meas)) |>
   collect_metrics()
 
 # create a confusion matrix
