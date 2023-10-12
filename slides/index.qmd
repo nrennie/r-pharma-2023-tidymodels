@@ -180,7 +180,11 @@ mod2 <- glm()
 
 How do you choose which explanatory variables to include?
 
-# Lasso regression
+## Lasso regression
+
+## Hyperparameter tuning
+
+## Model evaluation
 
 
 ## Lasso logistic regression in {tidymodels}
