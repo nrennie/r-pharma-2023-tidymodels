@@ -1,14 +1,4 @@
 
-# Build a recipe ----------------------------------------------------------
-
-hf_recipe <- recipe(death ~ ., data = hf_train) |> 
-  step_dummy(sex) |> 
-  step_normalize(age, serum_creatinine:time)
-
-wf <- workflow() |> 
-  add_recipe(hf_recipe)
-
-
 # Specify the model -------------------------------------------------------
 
 tune_spec <- logistic_reg(penalty = tune(), mixture = 1) |>
@@ -16,10 +6,6 @@ tune_spec <- logistic_reg(penalty = tune(), mixture = 1) |>
 
 
 # Tune the model ----------------------------------------------------------
-
-# Create cross validation folds
-set.seed(20231018)
-hf_folds <- vfold_cv(hf_train, v = 10)
 
 # Fit lots of values
 lasso_grid <- tune_grid(
