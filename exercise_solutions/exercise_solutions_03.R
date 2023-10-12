@@ -2,7 +2,7 @@ set.seed(20231018)
 
 # Specify model -----------------------------------------------------------
 
-tune_spec <- rand_forest(
+ex_rf_tune_spec <- rand_forest(
   mtry = tune(),
   trees = 1000,
   min_n = tune()
@@ -12,23 +12,25 @@ tune_spec <- rand_forest(
 
 # Tune hyperparameters ----------------------------------------------------
 
-rf_grid <- tune_grid(
-  add_model(wf, tune_spec),
+ex_rf_grid <- tune_grid(
+  add_model(ex_wf, ex_rf_tune_spec),
   resamples = ex_folds,
-  grid = grid_regular(mtry(range = c(5, 25)), min_n(range = c(1, 25)), levels = 5)
+  grid = grid_regular(mtry(range = c(5, 10)), # smaller ranges will run quicker
+                      min_n(range = c(2, 25)),
+                      levels = 3)
 )
 
 # Fit model ---------------------------------------------------------------
 
-highest_roc_auc <- rf_grid |>
+ex_rf_highest_roc_auc <- ex_rf_grid |>
   select_best("roc_auc")
 
-final_rf <- finalize_workflow(
-  add_model(wf, tune_spec),
-  highest_roc_auc
+ex_final_rf <- finalize_workflow(
+  add_model(ex_wf, ex_rf_tune_spec),
+  ex_rf_highest_roc_auc
 )
 
 # Evaluate ----------------------------------------------------------------
 
-last_fit(final_rf, ex_split) |>
+last_fit(ex_final_rf, ex_split) |>
   collect_metrics()
