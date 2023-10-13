@@ -1,4 +1,5 @@
 library(ggplot2)
+library(tidymodels)
 
 set.seed(20231013)
 plot_data <- data.frame(x = c(runif(15, 0.5, 1), runif(15, 0, 0.5)),
