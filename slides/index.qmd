@@ -221,7 +221,7 @@ Other types of machine learning include *semi-supervised learning* and *reinforc
 
 ::: columns
 
-::: {.column  width="30%"}
+::: {.column width="30%"}
 
 We can't always learn every parameter from the data.
 
@@ -238,6 +238,31 @@ We can't always learn every parameter from the data.
 :::
 
 ## Workflows and recipes
+
+::: columns
+
+::: {.column width="30%"}
+
+![](images/recipes.png){fig-align="center" fig-alt="recipes package hex sticker" width=80%} 
+
+:::
+
+::: {.column width="70%"}
+
+**Recipe**
+
+A series of preprocessing steps performed on data before you fit a model.
+
+<br>
+
+**Workflow**
+
+An object that can combine your pre-processing, modelling, and post-processing steps. E.g. combine a `recipe` with a model.
+
+
+:::
+
+:::
 
 ## Pre-processing in {tidymodels}
 
