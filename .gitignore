@@ -5,4 +5,4 @@
 *.pdf
 *.html
 *_files/
-data/heart_failure_clinical_records_dataset.csv
+script.qmd
