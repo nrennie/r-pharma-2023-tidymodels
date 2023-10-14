@@ -4,7 +4,7 @@ set.seed(20231018)
 
 tune_spec_rf <- rand_forest(
   mtry = tune(),
-  trees = 1000,
+  trees = 100,
   min_n = tune()
 ) |>
   set_mode("classification") |>
