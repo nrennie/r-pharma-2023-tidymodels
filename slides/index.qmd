@@ -20,11 +20,44 @@ The workshop will run for *2 hours*.
 
 * Ask questions in the chat throughout!
 
+## What to expect during this workshop
+
+::: columns
+::: {.column}
+
+<br>
+
+I hope you end up with more questions than answers after this workshop!
+
+:::
+
+::: {.column .center}
+
+![](images/questions.gif){fig-align="center" fig-alt="Stranger Things questions gif" width=80%}
+
+<small>Source: <a href="https://giphy.com/gifs/netflix-stranger-things-4-st4-cn7GcSZ1KWqO7CJw1B">giphy.com</a></small>
+
+:::
+:::
+
+
 ## Workshop resources
+
+::: columns
+::: {.column}
 
 * GitHub: [github.com/nrennie/r-pharma-2023-tidymodels](https://github.com/nrennie/r-pharma-2023-tidymodels)
 
 * Slides: [nrennie.github.io/r-pharma-2023-tidymodels](https://nrennie.github.io/r-pharma-2023-tidymodels)
+
+:::
+::: {.column}
+
+![](images/qr-code.png){fig-align="center" fig-alt="QR code" width=70%}
+
+:::
+
+:::
 
 ## Data
 
@@ -67,10 +100,21 @@ exercises <- readr::read_csv("data/exercises.csv")
 
 ::: {.column}
 
-![](images/tidymodels.png){fig-align="center" fig-alt="tidymodels R package hex sticker logo" width=50%}
+![](images/tidymodels-pkgs.png){fig-align="center" fig-alt="tidymodels packages hex sticker logo" width=80%}
+
+<small>Source: <a href="https://rpubs.com/chenx/tidymodels_tutorial">rpubs.com/chenx/tidymodels_tutorial</a></small>
 
 :::
 :::
+
+## What is {tidymodels}?
+
+There are some core {tidymodels} packages...
+
+![](images/tidymodels.png){fig-align="center" fig-alt="tidymodels R package hex sticker logo" width=50%}
+
+
+... and plenty of extensions!
 
 ## What is machine learning?
 
@@ -115,9 +159,11 @@ Cross-validation
 
 ## Pre-processing in {tidymodels}
 
-Live demo!
+### Live demo!
 
 . . . 
+
+<br><br>
 
 See `examples/example_01.R` for full code.
 
@@ -161,6 +207,8 @@ See `exercise_solutions/exercise_solutions_01.R` for full code.
 
 Let's go back a little bit first... 
 
+. . . 
+
 ::: columns
 
 ::: {.column}
@@ -169,19 +217,22 @@ Let's go back a little bit first...
 #| label: lin-reg
 #| eval: false
 #| echo: true
-mod1 <- lm()
+lm(y ~ x, data = model_data)
 ```
+
+![](images/lasso_01.png){fig-align="center" fig-alt="Linear regression plot" width=70%}
 :::
 
-::: {.column}
+::: {.column .fragment}
 **Logistic regression**
 
 ```{r}
 #| label: log-reg
 #| eval: false
 #| echo: true
-mod2 <- glm()
+glm(y ~ x, family = "binomial", data = model_data)
 ```
+![](images/lasso_02.png){fig-align="center" fig-alt="Linear regression plot" width=70%}
 :::
 
 :::
@@ -192,15 +243,54 @@ How do you choose which explanatory variables to include?
 
 ## Lasso regression
 
+::: columns
+::: {.column}
+
+LASSO = Least Absolute Shrinkage and Selection Operator
+
+:::
+::: {.column}
+:::
+:::
+
+## Hyperparameters for LASSO regression
+
+**$\lambda$ (penalty)** = Between 0 and $\infty$
+
+* Higher value: more coefficients are pushed towards zero
+
+* Lower value: closer to standard regression models. ($\lambda = 0$ ~ standard regression model)
 
 ## Model evaluation
 
+::: columns
+::: {.column}
+
+**(Binary) Classification Metrics**
+
+* Accuracy: proportion of the data that are predicted correctly.
+
+* ROC AUC: area under the ROC (receiver operating characteristic) curve.
+
+* Kappa: similar to accuracy but normalised by the accuracy expected by chance alone.
+
+:::
+::: {.column .fragment .center}
+
+![](images/roc.png){fig-align="center" fig-alt="ROC curve" width=100%}
+<small>Source: <a href="https://commons.wikimedia.org/wiki/File:Roc-draft-xkcd-style.svg#filelinks">Martin Thoma (Wikipedia)</a></small>
+:::
+:::
+
+See [yardstick.tidymodels.org/articles/metric-types.html](https://yardstick.tidymodels.org/articles/metric-types.html).
 
 ## Lasso logistic regression in {tidymodels}
 
-Live demo!
+### Live demo!
 
 . . . 
+
+<br><br>
 
 See `examples/example_02.R` for full code.
 
@@ -239,13 +329,29 @@ See `exercise_solutions/exercise_solutions_02.R` for full code.
 
 ## Decision trees
 
+::: columns
+::: {.column}
+:::
+::: {.column}
+:::
+:::
+
 ## What are Random Forests?
+
+::: columns
+::: {.column}
+:::
+::: {.column}
+:::
+:::
 
 ## Random Forests in {tidymodels}
 
-Live demo!
+### Live demo!
 
 . . . 
+
+<br><br>
 
 See `examples/example_03.R` for full code.
 
@@ -281,12 +387,86 @@ See `exercise_solutions/exercise_solutions_03.R` for full code.
 
 ## What are Support Vector Machines?
 
+::: columns
+::: {.column}
+
+Support Vector Machines (SVMs) draw a decision boundary that best separates two groups.
+
+:::
+::: {.column}
+
+![](images/svm_01.png){fig-align="center" fig-alt="Scatter plot with two groups" width=100%}
+:::
+:::
+
+## What are Support Vector Machines?
+
+::: columns
+::: {.column}
+
+Support Vector Machines (SVMs) draw a decision boundary that best separates two groups.
+
+:::
+::: {.column}
+
+![](images/svm_02.png){fig-align="center" fig-alt="Scatter plot with two groups with dividing line" width=100%}
+:::
+:::
+
+## Types of SVM
+
+There are different types of *kernel* functions, including:
+
+::: columns
+::: {.column width="33%" .center}
+Linear
+
+`svm_linear()`
+
+![](images/svm_03.png){fig-align="center" fig-alt="linear kernel plot" width=100%}
+:::
+
+::: {.column width="33%" .center}
+Polynomial
+
+`svm_poly()`
+
+![](images/svm_04.png){fig-align="center" fig-alt="polynomial kernel plot" width=100%}
+:::
+
+::: {.column width="33%" .center}
+Radial Basis Functions
+
+`svm_rbf()`
+
+![](images/svm_05.png){fig-align="center" fig-alt="RBF kernel plot" width=100%}
+:::
+
+:::
+
+## Hyperparameters in SVMs
+
+**Cost**
+
+* Higher value: emphasises fitting the data
+
+* Lower value: prioritises avoiding overfitting
+
+**Gamma** (shape and smoothness of decision boundary)
+
+* Higher value: more flexible boundaries
+
+* Lower value: simpler boundaries
+
+There may be other hyperparameters, depending on the choice of kernel.
 
 ## Support Vector Machines in {tidymodels}
 
-Live demo!
+### Live demo!
 
 . . . 
+
+<br><br>
 
 See `examples/example_04.R` for full code.
 
@@ -322,21 +502,38 @@ See `exercise_solutions/exercise_solutions_04.R` for full code.
 
 # Additional Information {background-color="#D9DBDB"}
 
-## Unsupervised learning
+## Additional Information
 
-* K-means clustering
+There are many machine learning models and {tidymodels} functions we haven't covered today.
 
 ## Additional resources
+
+::: columns
+
+::: {.column}
+
+* [{tidymodels} documentation](https://www.tidymodels.org/)
+
+* [Tidy Modeling with R](https://www.tmwr.org/)
+
+* [Blog by Julia Silge](https://juliasilge.com/blog/)
+
+:::
+
+::: {.column}
+
+![](images/tmwr.png){fig-align="center" fig-alt="Tidy modelling with R cover" width=70%}
+
+:::
+
+:::
+
+## Workshop resources
 
 * GitHub: [github.com/nrennie/r-pharma-2023-tidymodels](https://github.com/nrennie/r-pharma-2023-tidymodels)
 
 * Slides: [nrennie.github.io/r-pharma-2023-tidymodels](https://nrennie.github.io/r-pharma-2023-tidymodels)
 
-. . . 
-
-* [Tidy Modeling with R](https://www.tmwr.org/)
-
-* [Blog by Julia Silge](https://juliasilge.com/blog/)
 
 ## 
 
