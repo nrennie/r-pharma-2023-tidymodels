@@ -328,7 +328,8 @@ Let's go back a little bit first...
 lm(y ~ x, data = model_data)
 ```
 
-![](images/Lasso_01.png){fig-align="center" fig-alt="Linear regression plot" width=70%}
+![](images/lasso_01.png){fig-align="center" fig-alt="Linear regression plot" width=70%}
+
 :::
 
 ::: {.column .fragment}
@@ -340,7 +341,9 @@ lm(y ~ x, data = model_data)
 #| echo: true
 glm(y ~ x, family = "binomial", data = model_data)
 ```
-![](images/Lasso_02.png){fig-align="center" fig-alt="Linear regression plot" width=70%}
+
+![](images/lasso_02.png){fig-align="center" fig-alt="Linear regression plot" width=70%}
+
 :::
 
 :::
