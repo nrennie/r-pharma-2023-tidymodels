@@ -4,6 +4,7 @@ subtitle: "R/Pharma 2023"
 author: "Dr Nicola Rennie"
 format:
   LUstyle-revealjs:
+    self-contained: true
     footer: "[nrennie.github.io/r-pharma-2023-tidymodels](https://nrennie.github.io/r-pharma-2023-tidymodels)"
 bibliography: references.bib
 ---
@@ -55,7 +56,7 @@ I hope you end up with more questions than answers after this workshop!
 :::
 ::: {.column}
 
-![](images/qr-code.png){fig-align="center" fig-alt="QR code" width=70%}
+![](images/qr-code-slides.png){fig-align="center" fig-alt="QR code" width=70%}
 
 :::
 
@@ -229,7 +230,7 @@ We can't always learn every parameter from the data.
 
 ::: {.column .fragment width="70%"}
 
-![](images/kfold.jpg){fig-align="center" fig-alt="kfold validation" width=80%} 
+![](images/kfold.jpg){fig-align="center" fig-alt="kfold validation" width=70%} 
 
 <small>Source: <a href="https://www.researchgate.net/publication/332370436_Introduction_to_Support_Vector_Machines_and_Kernel_Methods">Introduction to Support Vector Machines and Kernel Methods. Ashfaque and Iqbal. 2019.</a></small>
 
@@ -402,6 +403,8 @@ See also: ridge regression
 
 * Kappa: similar to accuracy but normalised by the accuracy expected by chance alone.
 
+See [yardstick.tidymodels.org/articles/metric-types.html](https://yardstick.tidymodels.org/articles/metric-types.html).
+
 :::
 ::: {.column .fragment .center}
 
@@ -410,8 +413,6 @@ See also: ridge regression
 <small>Source: <a href="https://commons.wikimedia.org/wiki/File:Roc-draft-xkcd-style.svg#filelinks">Martin Thoma (Wikipedia)</a></small>
 :::
 :::
-
-See [yardstick.tidymodels.org/articles/metric-types.html](https://yardstick.tidymodels.org/articles/metric-types.html).
 
 ## LASSO logistic regression in {tidymodels}
 
@@ -478,7 +479,7 @@ A tree-like model of decisions and their possible consequences.
 :::
 ::: {.column}
 
-![](images/rf_01.png){fig-align="center" fig-alt="Decision tree about walking to work and the weather" width=100%}
+![](images/rf_01.png){fig-align="center" fig-alt="Decision tree about walking to work and the weather" width=80%}
 
 :::
 :::
