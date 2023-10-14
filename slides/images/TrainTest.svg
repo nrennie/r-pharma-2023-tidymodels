@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="200mm"
+   height="80mm"
+   viewBox="0 0 200 80"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.2 (b8e25be833, 2022-02-05)"
+   sodipodi:docname="TrainTest.svg"
+   inkscape:export-filename="G:\My Drive\GitHub\r-pharma-2023-tidymodels\slides\images\TrainTest.png"
+   inkscape:export-xdpi="300"
+   inkscape:export-ydpi="300"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="1.0053654"
+     inkscape:cx="299.89097"
+     inkscape:cy="335.69884"
+     inkscape:window-width="1920"
+     inkscape:window-height="991"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <rect
+       x="52.717153"
+       y="193.95934"
+       width="186.99669"
+       height="98.471658"
+       id="rect11915" />
+    <rect
+       x="377.97204"
+       y="194.954"
+       width="219.82058"
+       height="54.706479"
+       id="rect7066" />
+    <rect
+       x="164.11944"
+       y="186.99669"
+       width="170.08742"
+       height="55.701143"
+       id="rect2418" />
+    <rect
+       x="52.717152"
+       y="193.95934"
+       width="201.91664"
+       height="110.40762"
+       id="rect11915-0" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g1006">
+      <rect
+         style="fill:#b20e10;stroke-width:1.96368;stroke-linecap:round"
+         id="rect846"
+         width="120"
+         height="25.001276"
+         x="10.790024"
+         y="14.738" />
+      <rect
+         style="fill:#999999;stroke-width:1.30051;stroke-linecap:round"
+         id="rect846-1"
+         width="52.634254"
+         height="25.001278"
+         x="130.79002"
+         y="14.738" />
+    </g>
+    <text
+       xml:space="preserve"
+       transform="matrix(0.26458333,0,0,0.26458333,6.4709779,-29.305645)"
+       id="text2416"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect2418);fill:#ffffff;fill-opacity:1;stroke:#ffffff"><tspan
+         x="164.11914"
+         y="223.3911"
+         id="tspan902">Training</tspan></text>
+    <text
+       xml:space="preserve"
+       transform="matrix(0.26458333,0,0,0.26458333,39.212527,-31.410943)"
+       id="text7064"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect7066);fill:#000000;fill-opacity:1;stroke:#000000"><tspan
+         x="377.97266"
+         y="231.34813"
+         id="tspan904">Testing</tspan></text>
+    <text
+       xml:space="preserve"
+       transform="matrix(0.26458333,0,0,0.26458333,33.422757,-7.3404902)"
+       id="text11913"
+       style="font-style:normal;font-weight:normal;font-size:26.6667px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect11915);fill:#000000;fill-opacity:1;stroke:none"
+       x="199.21698"
+       y="0"><tspan
+         x="92.73478"
+         y="218.22235"
+         id="tspan908"><tspan
+           style="text-align:center;text-anchor:middle"
+           id="tspan906">Used for </tspan></tspan><tspan
+         x="106.5215"
+         y="251.55573"
+         id="tspan912"><tspan
+           style="text-align:center;text-anchor:middle"
+           id="tspan910">model </tspan></tspan><tspan
+         x="63.721479"
+         y="284.8891"
+         id="tspan916"><tspan
+           style="text-align:center;text-anchor:middle"
+           id="tspan914">development</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       transform="matrix(0.26458333,0,0,0.26458333,117.28825,-7.375768)"
+       id="text11913-2"
+       style="font-style:normal;font-weight:normal;font-size:26.6667px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect11915-0);fill:#000000;fill-opacity:1;stroke:none"
+       x="199.21698"
+       y="0"><tspan
+         x="105.47572"
+         y="218.22235"
+         id="tspan920"><tspan
+           style="text-align:center;text-anchor:middle"
+           id="tspan918">Used to </tspan></tspan><tspan
+         x="70.022365"
+         y="251.55573"
+         id="tspan924"><tspan
+           style="text-align:center;text-anchor:middle"
+           id="tspan922">evaluate final </tspan></tspan><tspan
+         x="113.98243"
+         y="284.8891"
+         id="tspan928"><tspan
+           style="text-align:center;text-anchor:middle"
+           id="tspan926">model</tspan></tspan></text>
+  </g>
+</svg>
