@@ -383,9 +383,7 @@ See also: ridge regression
 
 ## Hyperparameters for LASSO regression
 
-**$\lambda$ (penalty)**
-
-$\lambda$ takes a value between 0 and $\infty$.
+**$\lambda$ (penalty)** takes a value between 0 and $\infty$.
 
 * Higher value: more coefficients are pushed towards zero
 
@@ -456,14 +454,32 @@ countdown::countdown(minutes = 10,
 
 See `exercise_solutions/exercise_solutions_02.R` for full code.
 
+## Quiz!
+
+What was the ROC AUC of your LASSO model?
+
+* Less than 70%
+
+* 70-80%
+
+* 80-90%
+
+* 90-100%
+
 # Random Forests {background-color="#D9DBDB"}
 
 ## Decision trees
 
 ::: columns
 ::: {.column}
+
+A tree-like model of decisions and their possible consequences.
+
 :::
 ::: {.column}
+
+![](images/rf_01.png){fig-align="center" fig-alt="Decision tree about walking to work and the weather" width=100%}
+
 :::
 :::
 
@@ -471,10 +487,36 @@ See `exercise_solutions/exercise_solutions_02.R` for full code.
 
 ::: columns
 ::: {.column}
+
+* An ensemble method
+
+* Combines many decision trees.
+
+* Can be used for classification or regression problems.
+
+* For classification tasks, the output of the random forest is the class selected by most trees.
+
 :::
 ::: {.column}
+
+![](images/rf.png){fig-align="center" fig-alt="Random Forest diagram" width=100%}
+
+<small>Source: <a href="https://en.m.wikipedia.org/wiki/File:Random_forest_explain.png">Tse Ki Chun (Wikimedia)</a></small>
+
 :::
 :::
+
+## Hyperparameters for random forests
+
+**trees**: number of trees in the ensemble.
+
+<br>
+
+**mtry**: number of predictors that will be randomly sampled at each split when creating the tree models.
+
+<br>
+
+**min_n**: minimum number of data points in a node that are required for the node to be split further.
 
 ## Random Forests in {tidymodels}
 
@@ -630,6 +672,16 @@ countdown::countdown(minutes = 10,
 . . . 
 
 See `exercise_solutions/exercise_solutions_04.R` for full code.
+
+## Quiz
+
+Which of the three models performed best on the `exercises` data?
+
+* LASSO
+
+* Random Forest
+
+* SVM
 
 # Additional Information {background-color="#D9DBDB"}
 
