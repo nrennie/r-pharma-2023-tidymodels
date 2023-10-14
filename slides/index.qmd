@@ -33,6 +33,8 @@ I hope you end up with more questions than answers after this workshop!
 
 ::: {.column .center}
 
+<br>
+
 ![](images/questions.gif){fig-align="center" fig-alt="Stranger Things questions gif" width=80%}
 
 <small>Source: <a href="https://giphy.com/gifs/netflix-stranger-things-4-st4-cn7GcSZ1KWqO7CJw1B">giphy.com</a></small>
@@ -83,6 +85,18 @@ heart_failure <- readr::read_csv("data/heart_failure.csv")
 exercises <- readr::read_csv("data/exercises.csv") 
 ```
 
+## Quiz!
+
+Have you done machine learning in R before?
+
+* No
+
+* Yes, with {tidymodels}
+
+* Yes, with {caret}
+
+* Yes, with something else
+
 # Getting started with \{tidymodels\} {background-color="#D9DBDB"}
 
 ## What is {tidymodels}?
@@ -100,60 +114,128 @@ exercises <- readr::read_csv("data/exercises.csv")
 
 ::: {.column}
 
-![](images/tidymodels-pkgs.png){fig-align="center" fig-alt="tidymodels packages hex sticker logo" width=80%}
-
-<small>Source: <a href="https://rpubs.com/chenx/tidymodels_tutorial">rpubs.com/chenx/tidymodels_tutorial</a></small>
+![](images/tidymodels.png){fig-align="center" fig-alt="tidymodels R package hex sticker logo" width=50%}
 
 :::
 :::
 
 ## What is {tidymodels}?
 
+::: columns
+
+::: {.column}
+
 There are some core {tidymodels} packages...
 
-![](images/tidymodels.png){fig-align="center" fig-alt="tidymodels R package hex sticker logo" width=50%}
-
+<br>
 
 ... and plenty of extensions!
 
+:::
+
+::: {.column .center}
+
+![](images/tidymodels-pkgs.png){fig-align="center" fig-alt="tidymodels packages hex sticker logo" width=100%} 
+
+<small>Source: <a href="https://rpubs.com/chenx/tidymodels_tutorial">rpubs.com/chenx/tidymodels_tutorial</a></small>
+
+:::
+
+:::
+
 ## What is machine learning?
 
-## Quiz!
+::: columns
+::: {.column}
 
-Have you done machine learning in R before?
+![](images/ML-01.png){fig-align="center" fig-alt="Machine learning diagram" width=80%} 
 
-* No
+:::
 
-* Yes, with {tidymodels}
+::: {.column}
 
-* Yes, with {caret}
+* Learning from data
 
-* Yes, with something else
+* Mostly used to make predictions or classifications.
+
+:::
+:::
+
+## What is machine learning?
+
+::: columns
+::: {.column}
+
+![](images/ML-02.png){fig-align="center" fig-alt="Machine learning diagram" width=80%} 
+
+:::
+
+::: {.column}
+
+* Learning from data
+
+* Mostly used to make predictions or classifications.
+
+:::
+:::
 
 ## Types of machine learning
 
-Aim:
+::: columns
+
+::: {.column}
+
+**Supervised learning**: requires labelled input data
 
 * Classification
-* Prediction
 
+* Regression-based models
 
-Process:
+* ...
 
-* Supervised
-* Unsupervised
+:::
 
-. . . 
+::: {.column}
 
-* Semi-supervised
+**Unsupervised learning**: does not require labelled input data
+
+* Clustering
+
+* Association rules
+
+* ...
+
+:::
+
+:::
+
+Other types of machine learning include *semi-supervised learning* and *reinforcement learning*.
 
 # Before we start fitting models... {background-color="#D9DBDB"}
 
-## Training and testing
+## Training and testing data
+
+![](images/TrainTest.png){fig-align="center" fig-alt="Training and testing diagram" width=70%} 
 
 ## Hyperparameter tuning
 
-Cross-validation
+::: columns
+
+::: {.column  width="30%"}
+
+We can't always learn every parameter from the data.
+
+:::
+
+::: {.column .fragment width="70%"}
+
+![](images/kfold.jpg){fig-align="center" fig-alt="kfold validation" width=80%} 
+
+<small>Source: <a href="https://www.researchgate.net/publication/332370436_Introduction_to_Support_Vector_Machines_and_Kernel_Methods">Introduction to Support Vector Machines and Kernel Methods. Ashfaque and Iqbal. 2019.</a></small>
+
+:::
+
+:::
 
 ## Workflows and recipes
 
@@ -201,7 +283,7 @@ countdown::countdown(minutes = 10,
 
 See `exercise_solutions/exercise_solutions_01.R` for full code.
 
-# Lasso regression {background-color="#D9DBDB"}
+# LASSO regression {background-color="#D9DBDB"}
 
 ## Linear and logistic regression models
 
@@ -220,7 +302,7 @@ Let's go back a little bit first...
 lm(y ~ x, data = model_data)
 ```
 
-![](images/lasso_01.png){fig-align="center" fig-alt="Linear regression plot" width=70%}
+![](images/Lasso_01.png){fig-align="center" fig-alt="Linear regression plot" width=70%}
 :::
 
 ::: {.column .fragment}
@@ -232,7 +314,7 @@ lm(y ~ x, data = model_data)
 #| echo: true
 glm(y ~ x, family = "binomial", data = model_data)
 ```
-![](images/lasso_02.png){fig-align="center" fig-alt="Linear regression plot" width=70%}
+![](images/Lasso_02.png){fig-align="center" fig-alt="Linear regression plot" width=70%}
 :::
 
 :::
@@ -241,21 +323,44 @@ glm(y ~ x, family = "binomial", data = model_data)
 
 How do you choose which explanatory variables to include?
 
-## Lasso regression
+* Using background knowledge
+
+* p-values and correlations between variables
+
+* Stepwise procedures (forward/backward/bi-directional)
+
+* Something else
+
+## LASSO regression
 
 ::: columns
 ::: {.column}
 
-LASSO = Least Absolute Shrinkage and Selection Operator
+**Standard regression**: minimise distance between predicted and observed values
+
+<br>
+
+**Least Absolute Shrinkage and Selection Operator (LASSO)**: minimise (distance between predicted and observed values + $\lambda$ $\times$ sum of coefficients)
+
+<br>
+
+See also: ridge regression
 
 :::
-::: {.column}
+::: {.column .fragment}
+
+![](images/lambda.png){fig-align="center" fig-alt="Lambda plot for lasso regression" width=100%}
+
+<small>Source: <a href="https://www.cvxpy.org/examples/machine_learning/lasso_regression.html">cvxpy.org/examples/machine_learning/lasso_regression.html</a></small>
+
 :::
 :::
 
 ## Hyperparameters for LASSO regression
 
-**$\lambda$ (penalty)** = Between 0 and $\infty$
+**$\lambda$ (penalty)**
+
+$\lambda$ takes a value between 0 and $\infty$.
 
 * Higher value: more coefficients are pushed towards zero
 
@@ -278,13 +383,14 @@ LASSO = Least Absolute Shrinkage and Selection Operator
 ::: {.column .fragment .center}
 
 ![](images/roc.png){fig-align="center" fig-alt="ROC curve" width=100%}
+
 <small>Source: <a href="https://commons.wikimedia.org/wiki/File:Roc-draft-xkcd-style.svg#filelinks">Martin Thoma (Wikipedia)</a></small>
 :::
 :::
 
 See [yardstick.tidymodels.org/articles/metric-types.html](https://yardstick.tidymodels.org/articles/metric-types.html).
 
-## Lasso logistic regression in {tidymodels}
+## LASSO logistic regression in {tidymodels}
 
 ### Live demo!
 
@@ -502,15 +608,25 @@ See `exercise_solutions/exercise_solutions_04.R` for full code.
 
 # Additional Information {background-color="#D9DBDB"}
 
-## Additional Information
+## Learning more about machine learning
 
-There are many machine learning models and {tidymodels} functions we haven't covered today.
+There are many machine learning topics and {tidymodels} functions we haven't covered today. As well as learning about the technical details of models and how to write code, it's important to learn about:
+
+* Ethics
+
+* Bias and discrimination
+
+* Explainability and validation
+
+* ...
 
 ## Additional resources
 
 ::: columns
 
 ::: {.column}
+
+<br>
 
 * [{tidymodels} documentation](https://www.tidymodels.org/)
 
@@ -522,7 +638,7 @@ There are many machine learning models and {tidymodels} functions we haven't cov
 
 ::: {.column}
 
-![](images/tmwr.png){fig-align="center" fig-alt="Tidy modelling with R cover" width=70%}
+![](images/tmwr.png){fig-align="center" fig-alt="Tidy modelling with R cover" width=60%}
 
 :::
 
@@ -542,7 +658,9 @@ There are many machine learning models and {tidymodels} functions we haven't cov
 
 <br>
 
-{{< fa brands twitter >}} [\@nrennie35](https://twitter.com/nrennie35)
+{{< fa brands linkedin >}} [nicola-rennie](https://www.linkedin.com/in/nicola-rennie/)
+
+{{< fa brands mastodon >}} [\@fosstodon.org/\@nrennie](https://fosstodon.org/deck/@nrennie)
 
 {{< fa brands github >}} [nrennie](https://github.com/nrennie)
 
@@ -557,4 +675,3 @@ There are many machine learning models and {tidymodels} functions we haven't cov
 
 :::
 :::
-
