@@ -26,16 +26,11 @@ jobs:
           
       - name: Install dependencies
         run: |
-          install.packages(c("ggplot2", "cowplot", "remotes", "dplyr", "countdown", "rmarkdown"))
-        shell: Rscript {0}
-        
-      - name: Install RSSthemes
-        run: |
-          remotes::install_github("nrennie/RSSthemes")
+          install.packages(c("countdown", "rmarkdown", "knitr"))
         shell: Rscript {0}
 
       - name: Render and Publish
         uses: quarto-dev/quarto-actions/publish@v2
         with:
           target: gh-pages
-          path: slides.qmd
+          path: slides/index.qmd
