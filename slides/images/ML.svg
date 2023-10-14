@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="200mm"
+   height="200mm"
+   viewBox="0 0 200 200"
+   version="1.1"
+   id="svg5"
+   sodipodi:docname="ML.svg"
+   inkscape:version="1.1.2 (b8e25be833, 2022-02-05)"
+   inkscape:export-filename="G:\My Drive\GitHub\r-pharma-2023-tidymodels\slides\images\ML-01.png"
+   inkscape:export-xdpi="300"
+   inkscape:export-ydpi="300"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     showguides="false"
+     inkscape:zoom="0.74648379"
+     inkscape:cx="377.10129"
+     inkscape:cy="378.4409"
+     inkscape:window-width="1920"
+     inkscape:window-height="991"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <rect
+       x="569.69983"
+       y="576.73315"
+       width="126.60079"
+       height="75.959974"
+       id="rect14269" />
+    <rect
+       x="586.57983"
+       y="407.93323"
+       width="173.56135"
+       height="103.77019"
+       id="rect12701" />
+    <rect
+       x="595.01984"
+       y="251.79326"
+       width="173.01995"
+       height="105.49997"
+       id="rect11387" />
+    <rect
+       x="475.45319"
+       y="94.246643"
+       width="199.7466"
+       height="119.56663"
+       id="rect2873" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <circle
+       style="fill:#000000;fill-opacity:0.1;stroke:#000000;stroke-width:0.73656;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path846"
+       cx="100"
+       cy="100"
+       r="94.904144" />
+    <circle
+       style="fill:#000000;fill-opacity:0.2;stroke:#000000;stroke-width:0.679102;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path846-8"
+       cx="100"
+       cy="138.9099"
+       r="55.422352" />
+    <circle
+       style="fill:#000000;fill-opacity:0.2;stroke:#000000;stroke-width:0.272687;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path846-8-6"
+       cx="100.53166"
+       cy="171.86258"
+       r="22.254229" />
+    <text
+       xml:space="preserve"
+       transform="matrix(0.29735801,0,0,0.29735801,-71.034237,-11.214018)"
+       id="text2871"
+       style="font-style:normal;font-weight:normal;font-size:23.3368px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect2873);fill:#000000;fill-opacity:1;stroke:none"
+       x="123.70677"
+       y="0"><tspan
+         x="533.64666"
+         y="115.47967"
+         id="tspan1592"><tspan
+           style="text-align:center;text-anchor:middle"
+           id="tspan1590">Artifical </tspan></tspan><tspan
+         x="511.18503"
+         y="144.65067"
+         id="tspan1596"><tspan
+           style="text-align:center;text-anchor:middle"
+           id="tspan1594">Intelligence</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       transform="matrix(0.29735801,0,0,0.29735801,-103.04278,19.404783)"
+       id="text11385"
+       style="font-style:normal;font-weight:normal;font-size:23.3368px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect11387);fill:#000000;fill-opacity:1;stroke:none"
+       x="52.280048"
+       y="0"><tspan
+         x="634.7857"
+         y="273.02654"
+         id="tspan1600"><tspan
+           style="text-align:center;text-anchor:middle"
+           id="tspan1598">Machine </tspan></tspan><tspan
+         x="635.96421"
+         y="302.19753"
+         id="tspan1604"><tspan
+           style="text-align:center;text-anchor:middle"
+           id="tspan1602">learning</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       transform="matrix(0.29735997,0,0,0.29735801,-88.339239,-7.0333148)"
+       id="text14267"
+       style="font-style:normal;font-weight:normal;font-size:23.3367px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect14269);fill:#000000;fill-opacity:1;stroke:none"
+       x="49.799862"
+       y="0"><tspan
+         x="604.1442"
+         y="597.96591"
+         id="tspan1608"><tspan
+           style="text-align:center;text-anchor:middle"
+           id="tspan1606">Deep </tspan></tspan><tspan
+         x="587.43511"
+         y="627.1368"
+         id="tspan1612"><tspan
+           style="text-align:center;text-anchor:middle"
+           id="tspan1610">learning</tspan></tspan></text>
+    <ellipse
+       style="fill:#b20e10;fill-opacity:1;stroke-width:1.51351;stroke-linecap:round"
+       id="path1032"
+       cx="133.75778"
+       cy="118.02834"
+       rx="9.7901936"
+       ry="9.924305" />
+    <ellipse
+       style="fill:#b20e10;fill-opacity:1;stroke-width:1.12995;stroke-linecap:round"
+       id="path1032-2"
+       cx="145.32019"
+       cy="133.23526"
+       rx="7.3091173"
+       ry="7.4092412" />
+    <ellipse
+       style="fill:#b20e10;fill-opacity:1;stroke-width:0.6368;stroke-linecap:round"
+       id="path1032-5"
+       cx="130.43373"
+       cy="135.31819"
+       rx="4.1191616"
+       ry="4.1755881" />
+  </g>
+</svg>
