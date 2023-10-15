@@ -16,7 +16,7 @@ rf_grid <- tune_grid(
   add_model(wf, tune_spec_rf),
   resamples = hf_folds,
   grid = grid_regular(
-    mtry(range = c(5, 11)),
+    mtry(range = c(5, 8)),
     min_n(), #default c(2, 40)
     levels = 5)
 )
