@@ -267,9 +267,13 @@ An object that can combine your pre-processing, modelling, and post-processing s
 
 ### Live demo!
 
-. . . 
+<br><br>
+
+::: {.fragment}
 
 See `examples/example_01.R` for full code.
+
+:::
 
 ## Exercise 1
 
@@ -417,11 +421,13 @@ See [yardstick.tidymodels.org/articles/metric-types.html](https://yardstick.tidy
 
 ### Live demo!
 
-. . . 
+<br><br>
 
+::: {.fragment}
 
 See `examples/example_02.R` for full code.
 
+:::
 
 ## Exercise 2
 
@@ -521,9 +527,13 @@ A tree-like model of decisions and their possible consequences.
 
 ### Live demo!
 
-. . . 
+<br><br>
+
+::: {.fragment}
 
 See `examples/example_03.R` for full code.
+
+:::
 
 ## Exercise 3
 
@@ -634,9 +644,13 @@ There may be other hyperparameters, depending on the choice of kernel.
 
 ### Live demo!
 
-. . . 
+<br><br>
+
+::: {.fragment} 
 
 See `examples/example_04.R` for full code.
+
+:::
 
 ## Exercise 4
 
