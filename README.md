@@ -8,8 +8,8 @@ This interactive workshop will introduce some common machine learning techniques
 
 ### Useful Links
 
-* Sign up: [eventbrite.com/e/introduction-to-machine-learning-with-tidymodels-tickets-728476070537](https://www.eventbrite.com/e/introduction-to-machine-learning-with-tidymodels-tickets-728476070537)
-
 * GitHub: [github.com/nrennie/r-pharma-2023-tidymodels](https://github.com/nrennie/r-pharma-2023-tidymodels)
 
 * Slides: [nrennie.github.io/r-pharma-2023-tidymodels](https://nrennie.github.io/r-pharma-2023-tidymodels)
+
+* Q & A blog post: [nrennie.rbind.io/blog/answering-some-tidymodels-questions](https://nrennie.rbind.io/blog/answering-some-tidymodels-questions/)
